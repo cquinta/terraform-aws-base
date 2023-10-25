@@ -1,21 +1,22 @@
 
 
 terraform {
- required_providers {
+  required_providers {
     aws = {
       source = "hashicorp/aws"
     }
   }
-
-provider "aws" {
-  region = "us-east-1"
-}
-backend "s3" {
-    bucket = "cquinta-terraform-20232510"
+  backend "s3" {
     key = "terraform.tfstate"
     region = "us-east-1"
  }
-}  
+}
+
+  provider "aws" {
+  region = "us-east-1"
+}
+
+  
 
 
 resource "aws_instance" "aula01" {
