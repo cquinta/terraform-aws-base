@@ -3,13 +3,6 @@ provider "aws" {
   
 }
 
-terraform {
-  backend "s3" {
-    bucket = "mybucket-infnet-aula01"
-    key    = "aula01"
-    region = "us-east-1"
-  }
-}
 resource "aws_instance" "aula01" {
     ami = "ami-0fc5d935ebf8bc3bc"
     instance_type = "t2.micro"
