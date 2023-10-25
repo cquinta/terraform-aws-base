@@ -12,6 +12,8 @@ on:
     paths:
     - terraform/**
   workflow_dispatch:
+    paths:
+    - terraform/**
 
 env: 
   TF_LOG: INFO
