@@ -1,12 +1,22 @@
+
+
+terraform {
+ required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
+
 provider "aws" {
   region = "us-east-1"
-  backend "s3" {
+}
+backend "s3" {
     bucket = "cquinta-terraform-20232510"
     key = "terraform.tfstate"
     region = "us-east-1"
-  }
-  
-}
+ }
+}  
+
 
 resource "aws_instance" "aula01" {
     ami = "ami-0fc5d935ebf8bc3bc"
