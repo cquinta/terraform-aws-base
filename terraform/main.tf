@@ -22,10 +22,10 @@ terraform {
 resource "aws_instance" "aula01" {
     ami = "ami-0fc5d935ebf8bc3bc"
     instance_type = "t2.micro"
-    key_name = "infnetlab"
-    vpc_security_group_ids = ["sg-0d262ddc7a402de2c"]
+    key_name = "aula02"
+    vpc_security_group_ids = ["sg-0bedf647659414f84"]
     tags = {
-        Name = "instance-terraform",
+        Name = "instance-terraform1",
         CreatedBy = "Terraform"
     }   
   
